@@ -15,6 +15,7 @@
         <air.version>13.0</air.version>
         <playerglobal.version>11.7</playerglobal.version>
         <flexunit.version>4.0-rc-1</flexunit.version>
+        <starling.version>1.5.1</starling.version>
         <skipTests>true</skipTests>
         <flex.compile.debug>false</flex.compile.debug>
     </properties>
@@ -42,7 +43,7 @@
       <dependency>
           <groupId>com.gamua</groupId>
           <artifactId>starling-framework</artifactId>
-          <version>1.5.1</version>
+          <version>${starling.version}</version>
           <type>swc</type>
       </dependency>
       <dependency>
