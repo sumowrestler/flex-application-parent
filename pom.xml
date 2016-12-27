@@ -6,16 +6,16 @@
 
     <groupId>nz.co.idevelop.flex</groupId>
     <artifactId>flex-application-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
-        <flexmojos.version>6.0.1</flexmojos.version>
-        <flex.version>4.9.1.1447119</flex.version>
-        <air.version>13.0</air.version>
-        <playerglobal.version>11.7</playerglobal.version>
+        <flex.version>4.15.0</flex.version>
+        <air.version>23.0</air.version>
+        <flexmojos.version>7.1.0</flexmojos.version>
+        <flash.version>20.0</flash.version>
         <flexunit.version>4.0-rc-1</flexunit.version>
-        <starling.version>1.5.1</starling.version>
+        <starling.version>2.1.0-SNAPSHOT</starling.version>
         <skipTests>true</skipTests>
         <flex.compile.debug>false</flex.compile.debug>
     </properties>
@@ -28,28 +28,38 @@
 
  <dependencyManagement>
     <dependencies>
+      <!-- Flex SDK dependencies -->
       <dependency>
-          <groupId>com.adobe.air.framework</groupId>
-          <artifactId>common-framework</artifactId>
-          <version>${air.version}</version>
-          <type>pom</type>
-      </dependency>
-      <dependency>
-          <groupId>com.adobe.flex.framework.air</groupId>
-          <artifactId>air-framework</artifactId>
+          <groupId>org.apache.flex</groupId>
+          <artifactId>framework</artifactId>
           <version>${flex.version}</version>
           <type>pom</type>
       </dependency>
+      <!-- Air SDK dependencies -->
+      <dependency>
+          <groupId>org.apache.flex.framework</groupId>
+          <artifactId>air</artifactId>
+          <version>${flex.version}</version>
+          <type>pom</type>
+      </dependency>
+      <!-- Air runtime dependencies -->
+      <dependency>
+          <groupId>com.adobe.air</groupId>
+          <artifactId>framework</artifactId>
+          <version>${air.version}</version>
+          <type>pom</type>
+      </dependency>
+      <!-- Flash Player dependencies-->
+        <dependency>
+            <groupId>com.adobe.flash.framework</groupId>
+            <artifactId>playerglobal</artifactId>
+            <version>${flash.version}</version>
+            <type>swc</type>
+        </dependency>
       <dependency>
           <groupId>com.gamua</groupId>
           <artifactId>starling-framework</artifactId>
           <version>${starling.version}</version>
-          <type>swc</type>
-      </dependency>
-      <dependency>
-          <groupId>com.adobe.flash.framework</groupId>
-          <artifactId>playerglobal</artifactId>
-          <version>${playerglobal.version}</version>
           <type>swc</type>
       </dependency>
       <dependency>
@@ -80,7 +90,7 @@
             <extensions>true</extensions>
             <dependencies>
                 <dependency>
-                    <groupId>com.adobe.flex</groupId>
+                    <groupId>org.apache.flex</groupId>
                     <artifactId>compiler</artifactId>
                     <version>${flex.version}</version>
                     <type>pom</type>
