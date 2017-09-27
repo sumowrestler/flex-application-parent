@@ -6,14 +6,14 @@
 
     <groupId>nz.co.idevelop.flex</groupId>
     <artifactId>flex-application-parent</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
-        <flex.version>4.15.0</flex.version>
-        <air.version>23.0</air.version>
+        <flex.version>4.16.0</flex.version>
+        <air.version>26.0</air.version>
         <flexmojos.version>7.1.0</flexmojos.version>
-        <flash.version>20.0</flash.version>
+        <flash.version>26.0</flash.version>
         <flexunit.version>4.0-rc-1</flexunit.version>
         <starling.version>2.1.0-SNAPSHOT</starling.version>
         <skipTests>true</skipTests>
